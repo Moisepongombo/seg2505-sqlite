@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="DatabaseProject"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView android:text="Product ID" android:paddingEnd="16dp" />
+            <TextView
+                android:id="@+id/productID"
+                android:text="Not assigned" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="8dp">
+            <TextView android:text="Product Name" android:paddingEnd="16dp" />
+            <EditText
+                android:id="@+id/productName"
+                android:hint="ex. Clavier"
+                android:inputType="text" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Product SKU" android:paddingEnd="16dp" />
+            <EditText
+                android:id="@+id/productSku"
+                android:hint="ex. 1001"
+                android:inputType="number" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:onClick="newProduct"
+            android:text="ADD" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:onClick="lookupProduct"
+            android:text="FIND" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="removeProduct"
+            android:text="DELETE" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Contenu de la table products :"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/productList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace" />
+
+</LinearLayout>
